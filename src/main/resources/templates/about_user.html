@@ -7,9 +7,15 @@
 <body>
 <p th:text= "name" />
 <div class="container mt-5">
+    <table>
+        <tr>
+            <th>NAME</th>
+        </tr>
+        <tr th:each="prod : ${Client}">
+            <td th:text="${prod.name}"></td>
+        </tr>
+    </table>
     <h1>Main Page</h1>
-
-
 </div>
 </body>
 </html>
