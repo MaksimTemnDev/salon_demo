@@ -21,10 +21,6 @@ public class Rename {
     public  String home(Model model){
         Iterable<Client> clients = repository.findAll();
         List<Client> clients1 = new ArrayList<>();
-
-
-        //model.addAttribute("Client", clients);
-        //clients1 = service.findAllClients();
         clients.forEach(clients1::add);
         model.addAttribute("Client", clients1);
         return "about_user";
